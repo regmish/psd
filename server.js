@@ -26,8 +26,10 @@ app.get('/',function(req,res){
 
 app.post('/upload',function(req,res){
   if(done==true){
-    console.log(req.files);
-    res.end("Upload Successful");
+    res.json({
+      uploaded: true,
+      message: "layers exported into output folder"
+    })
   }
 });
 
